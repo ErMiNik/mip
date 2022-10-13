@@ -1,0 +1,28 @@
+game engine-
+
+co je to game engine
+
+preco je dolezity pri vyvoji hier
+
+prve game enginy v porovnani s dnesnymi
+
+navrhovanie vlastneho game enginu
+
+pouzite financie na vybudovanie enginu
+
+limity a obmedzenia ktore obmedzuju vyvojarov (mala ram, slabe graficke karty, etc.)
+
+najznamejsie game enginy
+
+predstavenie unreal 5
+
+preco je to prevrtatne
+
+ako funguje
+
+co nie je optimalne a problematicke (vyhody/nevyhody)
+
+herne company a ich prechod na unreal 5
+
+gta prechod na unreal 5
+
