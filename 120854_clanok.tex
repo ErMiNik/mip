@@ -1,0 +1,77 @@
+% Metódy inžinierskej práce
+
+\documentclass[10pt,twoside,slovak,a4paper]{article}
+
+\usepackage[slovak]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+
+\usepackage{cite}
+%\usepackage{times}
+
+\pagestyle{headings}
+
+\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2022/23, vedenie: Ladislav Zemko}} % meno a priezvisko vyučujúceho na cvičeniach
+
+\author{Milan Mikuláš\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{xmikulasm@stuba.sk}}
+	}
+
+\date{\small 6. Novembra 2022}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+%\ldots
+\cite{abs}Prvorado autor vysvetli čo herný engine vo všeobecnosti je, zhrnie jeho účel a prečo je pri vývoji hier dôležitý. Nasledovne bude písať o nových najznámejších herných enginoch, stručne medzi sebou porovná Unreal Engine a Unity Engine. Medzi novými enginami sa hlavne zameria na unreal engine 5, históriu, predošle generacie, ich zmeny a posuny vpred. Autor vysvetli a bude sa zaujímať o to prečo je pravé tento engine prevratný, na akom princípe funguje, jeho limity a obmedzenia s ktorými by sa mohli vývojári stretnúť. Preberie taktiež problematiku v čom by tento engine nemusel by optimálny, herne spoločnosti a ich prechod na tento engine. Použite financie na vybudovanie enginu a časová náročnosť. Nakoniec by autor rad spomenul ako by sa dal navrhnúť vlastný primitívny herný enginu a s akými problémami by sa vývojár stretol či už v malom projekte alebo aj veľké firmy.
+\end{abstract}
+
+
+
+\section{Úvod} 
+
+Už pri pomyslení ako vytvárať hru sa nám to určite nezdá ako jednoduchá práca na par hodín ci dni. Samostatne riešenie problémov ako načítavanie grafických textúr, 3d postav a svetla by vedelo zabrať niekoľko mesiacov a to nie je ani zlomok toho, čo by v dnešnej dobe mala kvalitná hra, ktorá chce u ľudí vyniknúť, obsahovať. Tuto problematiku opakovania kódu a opätovného “vynaliezania kolesa” riešia herne enginy.
+
+\section{Herný engine} 
+
+Herný engine je softvérové vývojove prostredie obsahujúce nástroje pre vytváranie hier na počítače a iné herne platformy ako napríklad herne konzoly. Tieto vývojove prostredia často poskytujú nástroje na rendering 2D alebo 3D grafiky, fyzikálne enginy, detekcie kolízii, animácie, zvuk, AI, management pamäte a veľa ďalších. Tieto softvéry ale nie sú určené iba na vývoj hier. Herne enginy sú často upravovane a ich predom naprogramovane nástroje sú využívane na modelovanie prostredia, reklamne ukážky, marketingové videa alebo tréningové simulátory.
+\cite{herne-enginy}
+\subsection{Účel} 
+
+V mnoho herných enginoch sú grafické nástroje ktoré môže vývojár hier používať bez toho aby museli byt prácne odznova vytvorené a naprogramovane. Vďaka tomuto vie byt viac iných hier vytvorených pomocou jedného rovnakého herného enginu. To vie následne ušetriť veľa času a peňazí. Herne enginy sa často nazývajú aj middlever pretože slúžia ako flexibilná a opakovane používaná softvérová platforma, poskytujúca nástroje na zjednodušene a rýchlejšie vytváranie hier. 
+
+\subsection{Platformová abstrakcia} 
+
+Herne enginy casto ponúkajú platformovú abstrakciu. Platformová abstrakcia umožňuje aby ta istá hra fungovala na iných herných platformách bez toho aby sa musel cely zdrojový kód meniť. Zmeny v zdrojovom kóde sú často veľmi minimálne priam žiadne.
+
+\section{Najznámejšie herné enginy}
+
+Skúsený programátor ktorý ovláda a ma hlboké chápanie jedného z programovacích jazykov, by vedel naprogramovať veľa rôznych veci v oblasti informatiky. To ale neznamená že to bude najoptimálnejšie a najjednoduchšie riešenie. Tak ako pri správnom výbere programovacieho jazyka na naprogramovanie webovej stránky, hry alebo vytvárania softvérov aj vyber toho správneho herného enginu je doležíte. V oblasti vývoja hier dominujú veľké mená známych herných enginov ktoré sa opätovne používajú rozličnými firmami. Sú to prevažne Unity, Unreal Engine, CryEngine, Amazon Lumberyard, Godot a pár ďalších. Vyber z týchto softvérov má viacej kritérií. Jeden a ten najhlavnejší z nich je žáner hry. Hry ktoré sú vytvorené na jednom a tom istom hernom engine majú často pocitovo rovnaké črty ako napríklad pohyb, fyzika hry alebo načítanie grafiky. Tieto veci sú cesto iné medzi hernými enginami. 
+\cite{zname-enginy}
+
+\subsection{Unity a Unreal Engine} 
+
+Prvý z hlavných rozdielov medzi týmito softvérmi je programovací jazyk. Unity sa programuje v C\# kde to Unreal využíva zložitejšie C++. Porovnávanie týchto dvoch jazykov bolo nad rámec tejto témy. Oba sú však výkonné a vysoko levelové programovacie jazyky. Unity aj Unreal engine majú taktiež vizuálne programovanie. V ňom programátor vyberá z predom naprogramovaných blokov, inak nazývané aj uzly, a vizuálne ich spája. Tento typ programovania dominoval hlavne Unreal engine s jeho blueprintami a až neskôr ho implementoval Unity. Je taktiež doležíte diskutovať o tom ako zlozíte je naučiť sa v týchto enginoch programovať a pracovať. Veľa ľudí sa prikláňa k Unity pravé kvôli jeoh rozľahlejšej dokumentácii a nespočetnekrát viacej návodnou ktoré sa dajú nájsť aj bezplatne na internete. V porovnaní, Unreal engine je v tomto smere ťažšie dostupný a preto sa menej odporúča pre začiatočníkov v odbore vývoji hier
+
+\section{Unreal engine history} 
+
+Prvá generácia Unreal engine vznikla v roku 1995 ktorú začal a z 90\% sám naprogramoval Tim Sweeney. Táto generácia najprv využívala len procesor na renderovanie hry a až neskôr aj grafické karty čo umožňovalo vytváranie zložitejších hier s lepšou grafikou. Prvá vytvorená hra na tomto engine sa volala Unreal. Bola to jedna z prvých hier využívajúca detailne textúrovanie čo v jednoduchosti znamená, čim je hráč bližšie k objektu, tým je detailnejšie zobrazený. Ďalšie generácie sa zaoberali optimalizáciou, výkonnejšou grafikou, animácie kostier a možnosť vývoja hier na iné herne platformy. Táto možnosť prilákala veľké množstvo záujemcov a čoraz viac hier bolo vytvorených použitím Unreal enginu. V roku 2006 bol vydaný Unreal engine 3. Tato generácia bola založená na prvej generácii s pridaním nových systémov pre zvuk, fyziku a užitočných nástrojov ktoré boli dramaticky silné z pohľadu programátora. Jedna z hlavných zmien oproti druhej generácii boli výpočty. Výpočty v predchádzajúcich generáciách boli na vrcholy, kde to v Unreal engine 3 sa počítali na jeden pixel. Tato zmena hlavne znamenala zlepšenie grafiky a lepšie renderovanie. V roku 2010 tento enginin podporoval Windows, Xbox 360, PlayStation 3, IOS a Android. Bolo na ňom vytvorených veľa známych a doteraz hrávaných hier vrátane Gears of Wars 3, BioShock Infinite, Rocket League a veľa ďalších.
+\cite{Historia}
+
+
+%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
+
+% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
+\bibliography{literatura_mine}
+\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\end{document}
